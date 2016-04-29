@@ -10,7 +10,10 @@ module.exports = function(grunt) {
 					collapseWhitespace: true
 				},
 				files: {
-					'dist/index.html': 'src/index.html'
+					'dist/index.html': 'src/index.html',
+					'dist/project-2048.html': 'src/project-2048.html',
+					'dist/project-mobile.html': 'src/project-mobile.html',
+					'dist/project-webperf.html': 'src/project-webperf.html'
 				}
 			}
 		},
