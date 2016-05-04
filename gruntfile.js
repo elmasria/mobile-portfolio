@@ -13,14 +13,27 @@ module.exports = function(grunt) {
 					'dist/index.html': 'src/index.html',
 					'dist/project-2048.html': 'src/project-2048.html',
 					'dist/project-mobile.html': 'src/project-mobile.html',
-					'dist/project-webperf.html': 'src/project-webperf.html'
+					'dist/project-webperf.html': 'src/project-webperf.html',
+					'dist/views/pizza.html': 'src/views/pizza.html'
 				}
 			}
 		},
 		uglify: {
 			build: {
-				src: 'src/js/perfmatters.js',
-				dest: 'dist/js/perfmatters.min.js'
+				files: [{
+					expand: true,
+					cwd: 'src/js',
+					src: ['**/*.js'],
+					dest: 'dist/js',
+					ext: '.min.js'
+				},{
+					expand: true,
+					cwd: 'src/views/js',
+					src: ['**/*.js'],
+					dest: 'dist/views/js',
+					ext: '.min.js'
+				}]
+
 			}
 		},
 		cssmin: {
@@ -34,6 +47,12 @@ module.exports = function(grunt) {
 					cwd: 'src/css',
 					src: ['*.css', '!*.min.css'],
 					dest: 'dist/css',
+					ext: '.min.css'
+				},{
+					expand: true,
+					cwd: 'src/views/css',
+					src: ['*.css', '!*.min.css'],
+					dest: 'dist/views/css',
 					ext: '.min.css'
 				}]
 			}
@@ -107,6 +126,11 @@ module.exports = function(grunt) {
 					cwd: 'src/img/',
 					src: ['**/*.{png,jpg,svg}'],
 					dest:'dist/img/'
+				},{
+					expand: true,
+					cwd: 'src/views/images/',
+					src: ['**/*.{png,jpg,svg}'],
+					dest:'dist/views/images/'
 				}]
 			}
 		}
