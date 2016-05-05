@@ -536,7 +536,7 @@ window.addEventListener('scroll', onScroll);
 document.addEventListener('DOMContentLoaded', function() {
 	var cols = 8,
 	s = 256;
-	for (var i = 0; i < 20; i++) {
+	for (var i = 0; i < 45; i++) {
 		var elem = document.createElement('img');
 		elem.className = 'mover';
 		elem.src = "images/pizza.png";
