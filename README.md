@@ -9,6 +9,7 @@ to improve the performance of the website and run it on approximately 60fps.
 * navigate to the project repository
 * run the following code: ``` npm install ```
 * run: ``` grunt ```
+* navigate to dist folder : ``` cd dist/ ```
 * open server: ``` $> python -m SimpleHTTPServer 8080 ```
 * Open a browser and visit localhost:8080
 
